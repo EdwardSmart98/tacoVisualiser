@@ -49,11 +49,18 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin({cleanStaleWebpackAssets: false}),
     new HtmlWebpackPlugin({
+      template : './src/index.html',
       title: '3D multiplayer game',
     }),
   ],
   resolve: {
-    extensions: [".tsx", ".ts", ".js"]
+    extensions: [".tsx", ".ts", ".js"],
+    alias: {
+      "~/": "./src",
+      "@" : path.resolve(__dirname,'src'),
+      "@ts" : path.resolve(__dirname,'src','ts'),
+      "@assets" : path.resolve(__dirname,'src','assets'),
+    },
   },
   output: {
     filename: 'main.js',

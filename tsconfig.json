@@ -4,11 +4,14 @@
     "outDir": "src/js",
     "target": "es6",
     "moduleResolution": "node",
-    "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
-    "baseUrl": "./",
+    "resolveJsonModule": true,
+    "experimentalDecorators": true,
+    "sourceMap": true,
+    "baseUrl": ".",
     "paths": {
-      "*": ["src/ts/*"]
+      "@/*":["src/*"],
+      "@ts/*":["src/ts/*"],     
     }
   },
   "exclude": [
@@ -17,6 +20,7 @@
     "src/ts/tests/**/*"
   ],
   "include": [
-    "src/ts/**/*"
-  ]
+    "src/ts/**/*",
+    "src/js/**/*"
+  ],
 }
