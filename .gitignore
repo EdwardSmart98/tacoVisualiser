@@ -3,6 +3,6 @@ firebase.json
 .firebase/hosting.Y2xpZW50.cache
 .firebaserc
 .idea
-dist
 .DS_Store
 *.cache
+src/json/google_services.json
